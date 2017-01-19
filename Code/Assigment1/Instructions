@@ -1,0 +1,32 @@
+Web Client Development
+Assignment 1
+You may work in teams of 2 or 3 people. Each person needs to submit his/her own copy of the
+solutions. At the top of your work include a header that lists all persons on the team.
+1.
+    a. List the six falsy values that exist in JavaScript.
+        0,-0,empty String, undefined,null,false
+    b. Which of those values are considered equal using the == operator?
+                        0   -5  empty String    undefined   null    false
+        0               T   T   F               T           T       T
+        -5
+        empty String            T
+        undefined                               T
+        null                                                T
+        false           T                                            T
+    c. Which of those values are considered equal using the === operator?
+2.
+    a. List four ways to convert a string to a number in JavaScript.
+    b. For each of the four ways, what is the result of calling it with the string “5”?
+    c. For each of the four ways, what is the result of calling it with the string “3.14159”?
+    d. For each of the four ways, what is the result of calling it with the string “oops”?
+    e. For each of the four ways, what is the result of calling it with the string “123Hello”?
+    f. For each of the four ways, what is the result of calling it with null?
+    g. For each of the four ways, what is the result of calling it with undefined?
+3. Write a program that writes “Hello World” to the JavaScript console.
+You should turn in a single file that has a .js extension.
+4. Write a program that prompts the user to guess a number between 1 and 100.
+    If the guess is greater than 42, alert the user with the message “Too high”.
+    If the guess is lower than 42, alert the user with the message “Too low”.
+    If the guess is 42, then alert the user with the message “The Answer to the Ultimate
+    Question of Life, the Universe and Everything”.
+You should turn in a single file that has a .js extension.
