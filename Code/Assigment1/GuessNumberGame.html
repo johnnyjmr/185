@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var numberToGuess=Math.floor((Math.random() * 100) + 1);
+
+    </script>
+</head>
+<body>
+<script type="text/javascript">
+    // bab practice of html and javascript but i don't have time
+
+    function guessNumber() {
+        var userGuess=Number( document.getElementById('userNumber').value);
+        if (userGuess===numberToGuess){
+            document.getElementById('clue').innerHTML="you got it right the number was "+numberToGuess;
+            alert("The Answer to the Ultimate Question of Life, the Universe and Everything")
+        }else if (userGuess<numberToGuess&& userGuess>0){
+            document.getElementById('clue').innerHTML="too low";
+        }else if (userGuess>numberToGuess&&userGuess<100){
+            document.getElementById('clue').innerHTML="too high";
+        }else if (userGuess<0 || userGuess>100){
+            document.getElementById('clue').innerHTML="out of the range cowboy ";
+        }
+        document.getElementById('userNumber').value="";
+
+    }
+</script>
+Lest play a Game
+<input id="userNumber" type="number" onkeydown = "if (event.keyCode == 13) document.getElementById('checkAnswer').click()"  >
+<button onclick="guessNumber()" id="checkAnswer">Are yoy Lucky</button>
+<p id="clue">I'll tell you here if you are too high or too low </p>
+<p id="tip" style="-webkit-transform: rotate(-180deg);text-align: right">cheating number <script>document.write(numberToGuess)</script></p>
+
+</body>
+</html>

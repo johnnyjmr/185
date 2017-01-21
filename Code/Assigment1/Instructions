@@ -6,24 +6,59 @@ solutions. At the top of your work include a header that lists all persons on th
     a. List the six falsy values that exist in JavaScript.
         0,-0,empty String, undefined,null,false
     b. Which of those values are considered equal using the == operator?
-                        0   -5  empty String    undefined   null    false
-        0               T   T   F               T           T       T
-        -5
-        empty String            T
-        undefined                               T
-        null                                                T
-        false           T                                            T
+                        0   NaN  empty String    undefined   null    false
+        0               T   T       F               T          T       T
+        NaN                 F       F               F          F       F
+        empty String        F       T
+        undefined           F                       T
+        null                F                                  T
+        false           T   F                                         T
+
+        0== " "==FALSE
+        NULL==Undefined
+        NaN
     c. Which of those values are considered equal using the === operator?
+        they will only convert if they are exacly the same type and value
 2.
     a. List four ways to convert a string to a number in JavaScript.
+        parseInt(num); // default way
+        parseInt(num, 10); // parseInt with radix (decimal)
+        parseFloat(num) // floating point
+        Number(num); // Number constructor
+
     b. For each of the four ways, what is the result of calling it with the string “5”?
+        5 converted to number with parseInt(num); is 5
+        5 converted to number with parseInt(num, 10); is 5
+        5 converted to number with parseFloat(num); is 5
+        5 converted to number with Number(num); is 5
     c. For each of the four ways, what is the result of calling it with the string “3.14159”?
+        3.14159 converted to number with parseInt(num); is 3
+        3.14159 converted to number with parseInt(num, 10); is 3
+        3.14159 converted to number with parseFloat(num); is 3.14159
+        3.14159 converted to number with Number(num); is 3.14159
     d. For each of the four ways, what is the result of calling it with the string “oops”?
+        oops converted to number with parseInt(num); is NaN
+        oops converted to number with parseInt(num, 10); is NaN
+        oops converted to number with parseFloat(num); is NaN
+        oops converted to number with Number(num); is NaN
     e. For each of the four ways, what is the result of calling it with the string “123Hello”?
+        123Hello converted to number with parseInt(num); is 123
+        123Hello converted to number with parseInt(num, 10); is 123
+        123Hello converted to number with parseFloat(num); is 123
+        123Hello converted to number with Number(num); is NaN
     f. For each of the four ways, what is the result of calling it with null?
+        null converted to number with parseInt(num); is NaN
+        null converted to number with parseInt(num, 10); is NaN
+        null converted to number with parseFloat(num); is NaN
+        null converted to number with Number(num); is 0
     g. For each of the four ways, what is the result of calling it with undefined?
+        undefined converted to number with parseInt(num); is NaN
+        undefined converted to number with parseInt(num, 10); is NaN
+        undefined converted to number with parseFloat(num); is NaN
+        undefined converted to number with Number(num); is NaN
 3. Write a program that writes “Hello World” to the JavaScript console.
 You should turn in a single file that has a .js extension.
+    console.log("Hello World");
 4. Write a program that prompts the user to guess a number between 1 and 100.
     If the guess is greater than 42, alert the user with the message “Too high”.
     If the guess is lower than 42, alert the user with the message “Too low”.
