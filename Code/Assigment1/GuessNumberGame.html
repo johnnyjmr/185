@@ -13,18 +13,18 @@
     // bab practice of html and javascript but i don't have time
 
     function guessNumber() {
-        var userGuess=Number( document.getElementById('userNumber').value);
-        if (userGuess===numberToGuess){
-            document.getElementById('clue').innerHTML="you got it right the number was "+numberToGuess;
+        var userGuess = Number(document.getElementById('userNumber').value);
+        if (userGuess === numberToGuess) {
+            document.getElementById('clue').innerHTML = "you got it right the number was " + numberToGuess;
             alert("The Answer to the Ultimate Question of Life, the Universe and Everything")
-        }else if (userGuess<numberToGuess&& userGuess>0){
-            document.getElementById('clue').innerHTML="too low";
-        }else if (userGuess>numberToGuess&&userGuess<100){
-            document.getElementById('clue').innerHTML="too high";
-        }else if (userGuess<0 || userGuess>100){
-            document.getElementById('clue').innerHTML="out of the range cowboy ";
+        } else if (userGuess < numberToGuess && userGuess > 0) {
+            document.getElementById('clue').innerHTML = "too low";
+        } else if (userGuess > numberToGuess && userGuess < 100) {
+            document.getElementById('clue').innerHTML = "too high";
+        } else if (userGuess < 0 || userGuess > 100) {
+            document.getElementById('clue').innerHTML = "out of the range cowboy ";
         }
-        document.getElementById('userNumber').value="";
+        document.getElementById('userNumber').value = "";
 
     }
 </script>

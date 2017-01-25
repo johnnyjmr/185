@@ -1,0 +1,37 @@
+<!--
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Assignment2Model.js"></script>
+    <script>
+
+    </script>
+</head>
+<body onload="randomNumber('tip')">
+Lest play a Game
+<input id="userNumber" type="number"
+       onkeydown="if (event.keyCode == 13) document.getElementById('checkAnswer').click()">
+<button onclick="guessNumber()" id="checkAnswer">Are yoy Lucky</button>
+<p id="clue">I'll tell you here if you are too high or too low </p>
+
+<p id="tip"
+   style="-webkit-transform: rotate(-180deg);
+   text-align: right ;
+   display: block"
+   onload="randomNumber(this)">
+
+</p>
+
+<button onclick="document.getElementById('tip').style.display='block' ">show answer &#128519</button>
+
+
+<p id="debug"></p>
+</body>
+</html>

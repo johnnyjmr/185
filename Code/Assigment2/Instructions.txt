@@ -1,0 +1,37 @@
+Web Client Development Assignment 2
+
+You may work in teams of up to three people. Each person needs to submit their own copy of the solutions. At
+the top of your work include a header that lists all persons on the team.
+
+1. Write a game where the computer picks a random number between 1 and 100 (inclusive). It then prompts
+the user to guess the number according to the following rules:
+• If the user guesses too low, it prompts the user to guess higher.
+• If the user guesses too high, it prompts the user to guess lower.
+• If the user guesses correctly, it prints “You win, the number is x” (where x is the random number chosen
+by the computer).
+• If the user enters something that is not an integer or is not in the range of [1-100], it prints “x is not a valid
+guess” (where x is whatever the user entered).
+The game does not end until the user guesses the correct number.
+You should turn in a single js file for this problem.
+
+2. Write a function named “countCharacters” that accepts a string of text as it’s first parameter. It counts how
+many times each character within that string is used. It should have an optional second parameter that
+determines whether it is case-insensitive (e.g. does ‘a’ === ‘A’?).
+It should return an array of arrays where each inner array has two elements: [0] = the character and [1] =
+the count. The outer array should be sorted based on the count of each inner array. Higher counts should
+come before lower counts. The function signature should look like the following (TypeScript is used for
+illustration):
+/**
+ * Counts the number of occurrences of each character in the specified text.
+ *
+ * @param {string} text The string of text whose characters will be counted.
+ * @param {boolean} caseInsensitive (optional) Whether uppercase and lowercase letters will be
+ * treated as equal.
+ * @returns {[string, number][]} An array of arrays. The first element of each inner array is
+ * the character and the second element is the count. The outer
+ * array is sorted such that those characters with the highest
+ * count come first.
+ */
+function countCharacters(text: string, caseInsensitive?: boolean): [string, number][] {
+ // TODO: your code here
+}
