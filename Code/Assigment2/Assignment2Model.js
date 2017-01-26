@@ -24,28 +24,66 @@ function guessNumber() {
     }
 
 
-
-
-     if (userGuess < numberToGuess) {
-         document.getElementById('debug').innerHTML = document.getElementById('debug').innerHTML +
-             " <br> userGuess is smaller than numberToGuess";
+    if (userGuess < numberToGuess) {
+        document.getElementById('debug').innerHTML = document.getElementById('debug').innerHTML +
+            " <br> userGuess is smaller than numberToGuess";
 
     } else if (userGuess > numberToGuess) {
-         document.getElementById('debug').innerHTML = document.getElementById('debug').innerHTML +
-             " <br> userGuess is grater than numberToGuess";}
-
-
-
-
+        document.getElementById('debug').innerHTML = document.getElementById('debug').innerHTML +
+            " <br> userGuess is grater than numberToGuess";
+    }
 
 
     document.getElementById('userNumber').value = "";
 
-    document.getElementById('debug').innerHTML = document.getElementById('debug').innerHTML +" <br> numberToGuess("+numberToGuess+") is"+ String( typeof (numberToGuess))+"    " ;
-    document.getElementById('debug').innerHTML = document.getElementById('debug').innerHTML +"<br> and userGuess("+userGuess+") is"+ String( typeof (userGuess));
+    document.getElementById('debug').innerHTML = document.getElementById('debug').innerHTML + " <br> numberToGuess(" + numberToGuess + ") is" + String(typeof (numberToGuess)) + "    ";
+    document.getElementById('debug').innerHTML = document.getElementById('debug').innerHTML + "<br> and userGuess(" + userGuess + ") is" + String(typeof (userGuess));
 
 
 }
 function randomNumber(elementID) {
     document.getElementById(elementID).innerHTML = String(Math.floor((Math.random() * 100) + 1));
+}
+
+
+function createAbecedaryArray() {
+    var abecedary = [];
+    for (i = 0; i < 26; i++) {
+        abecedary.push({letter: String.fromCharCode(97 + i), frequency: 0});
+    }
+    for (i = 0; i < 26; i++) {
+        abecedary.push({letter: String.fromCharCode(65 + i), frequency: 0});
+    }
+
+    return abecedary;
+}
+
+function countLetters(userWord, ID ) {
+    alert(userWord);
+    var sandBox = createAbecedaryArray();
+
+    for (k = 0; k < userWord.length; k++) {
+        var letterFromWord = userWord.substring(k, k + 1);
+
+        for (j = 0; j < sandBox.length; j++) {
+            if (sandBox[j].letter === letterFromWord) {
+                sandBox[j].frequency = sandBox[j].frequency + 1;
+
+            }
+        }
+    }
+    sandBox[3].frequency = 34;
+    printAnswer(sandBox,ID);
+
+
+}
+
+function printAnswer(arrayTOPrint,ElementTOmodify) {
+
+    for (i = 0; i < arrayTOPrint.length; i++) {
+        if (arrayTOPrint[i].frequency !== 0) {
+            document.write(arrayTOPrint[i].letter + " repeat " + arrayTOPrint[i].frequency + " times </br>");
+            document.getElementById(arrayTOPrint[i].letter + " repeat " + arrayTOPrint[i].frequency + " times </br>");
+        }
+    }
 }
