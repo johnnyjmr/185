@@ -13,10 +13,10 @@ function guessNumber() {
         document.getElementById('clue').innerHTML = "you got it right the number was " + numberToGuess;
         alert("The Answer to the Ultimate Question of Life, the Universe and Everything")
 
-    } else if (userGuess < numberToGuess) {
+    } else if (userGuess < numberToGuess && userGuess>0) {
         document.getElementById('clue').innerHTML = "too low";
 
-    } else if (userGuess > numberToGuess) {
+    } else if (userGuess > numberToGuess && userGuess<0) {
         document.getElementById('clue').innerHTML = "too high";
 
     } else if (userGuess < 0 || userGuess > 100) {
@@ -59,7 +59,7 @@ function createAbecedaryArray() {
 }
 
 function countLetters(userWord, ID ) {
-    alert(userWord);
+    //for some reason it is not working.userWork is nothing
     var sandBox = createAbecedaryArray();
 
     for (k = 0; k < userWord.length; k++) {
@@ -72,18 +72,32 @@ function countLetters(userWord, ID ) {
             }
         }
     }
-    sandBox[3].frequency = 34;
+
     printAnswer(sandBox,ID);
 
 
 }
 
-function printAnswer(arrayTOPrint,ElementTOmodify) {
+function printAnswer(arrayTOPrint,ElementTomodify) {
+    // document.getElementById('try').innerHTML="<ul>";
+    // document.getElementById('try').innerHTML=document.getElementById('try').innerHTML+arrayTOPrint[5].letter+"</ul>";
+
+
+
+
+var list='<ul>';
 
     for (i = 0; i < arrayTOPrint.length; i++) {
+
         if (arrayTOPrint[i].frequency !== 0) {
-            document.write(arrayTOPrint[i].letter + " repeat " + arrayTOPrint[i].frequency + " times </br>");
-            document.getElementById(arrayTOPrint[i].letter + " repeat " + arrayTOPrint[i].frequency + " times </br>");
+
+            // list.appendChild( item=document.createElement("li").appendChild(document.createTextNode(arrayTOPrint[i].letter + " repeat " + arrayTOPrint[i].frequency + " times ")));
+
+            list=list+"<li>"+arrayTOPrint[i].letter + " repeat " + arrayTOPrint[i].frequency + " times </li>";
         }
     }
+    list=list+"</ul";
+    document.getElementById('try').innerHTML=list
+
+
 }
