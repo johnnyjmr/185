@@ -1,0 +1,36 @@
+<!--
+Johnny Mendoza
+Glen Turbon
+CS185
+Assignment 7
+Guess number using Jquery
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="Assignment2Model.js"></script>
+</head>
+<body onload="randomNumber('tip')">
+Lest play a Game
+<input id="userNumber" type="number"
+       onkeydown="if (event.keyCode == 13) guessNumber()"><!--.getElementById('checkAnswer').click()">
+<button onclick="guessNumber()" id="checkAnswer" style="display: none">Are yoy Lucky</button>   -->
+<p id="clue">I'll tell you here if you are too high or too low </p>
+
+<p id="tip"
+   style="-webkit-transform: rotate(-180deg);
+   text-align: right ;
+   display: none">
+
+</p>
+
+<button onclick="document.getElementById('tip').style.display='block' ">show answer &#128519</button>
+
+
+<p id="debug"></p>
+</body>
+</html>

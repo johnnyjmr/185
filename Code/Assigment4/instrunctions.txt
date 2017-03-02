@@ -1,0 +1,25 @@
+Instructions
+Create a class called Student with properties for first name, last name, full name, Classes and grades.
+
+Include methods for adding additional grades, getting grade average, getting letter grades
+
+Use ES6 modules to avoid global variables.
+
+
+Create a class called Student with properties for
+first name,
+last name,
+full name,
+Classes and
+grades.
+
+Include methods for adding
+additional grades,
+getting grade average,
+getting letter grades
+
+Use ES6 modules to avoid global variables.
+
+Make sure your code passes the test cases.
+
+Make sure your code passes the test cases.

@@ -1,0 +1,34 @@
+Assignment 7 Instructions
+*You may work in teams of up to 3 people. Each person needs to submit his own copy of the
+solutions. At the top of your work include a header that lists all persons on the team.
+For this assignment you are going to redo the guessing game you did in Assignment 2 but
+better! By way of reminder, here were the instructions for assignment 2:
+
+
+Assignment 2
+Write a game where the computer picks a random number between 1 and 100 (inclusive). It
+then prompts the user to guess the number according to the following rules:
+    • If the user guesses too low, it prompts the user to guess higher.
+    • If the user guesses too high, it prompts the user to guess lower.
+    • If the user guesses correctly, it prints “You win, the number is x” (where x is the random
+    number chosen by the computer).
+    • If the user enters something that is not an integer or is not in the range of [1-100], it prints
+    “x is not a valid guess” (where x is whatever the user entered).
+    • The game does not end until the user guesses the correct number.
+End of Assignment 2
+
+
+Better? How am I supposed to make it better? I’m glad you asked!
+Rules:
+    1. You must create a folder to contain all of your files.
+    2. You must create an HTML document inside of that folder.
+    3. You must include jQuery in your HTML document with a script tag.
+    4. You must include a separate second script tag for your own code.
+    5. Make sure that your random function correctly generates a number between 1 (inclusive) to
+    100 (inclusive). Don’t include zero! This is a pet peeve of mine! Pay attention to the bounds!
+    6. You cannot use alert or prompt! If you use these you will lose a lot of points! Don’t do it!!!!
+    7. Instead of using prompt, you will place a single text box on the HTML page where the user
+    can enter their guess. Don’t use JavaScript for this part — just put the text box in the HTML.
+    8. Instead of using alert, you will use jQuery to append elements (such as a div or a p) to
+    the page so that it looks like a conversation between the computer and the user. Each new
+    element must be placed below the previous one. See the screenshot below:

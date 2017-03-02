@@ -1,0 +1,16 @@
+Assignment 6 Instructions
+*You may work in teams of up to 3 people. Each person needs to submit his own copy of the
+solutions. At the top of your work include a header that lists all persons on the team.
+Before starting this assignment, you need to download and unzip the assignment6Project.zip
+folder from Brightspace. The project folder contains an html file, a stylesheet, images, and a
+JavaScript file. You will write your code in the JavaScript file.
+For this assignment, you are going to implement the feature that was demonstrated in the video
+where you can hover over an image to view a larger copy of that image.
+Here are the rules:
+• When the mouse is over an image, then a larger version of that image should be shown.
+• The larger image must be contained in a div that has a CSS class of image-display.
+• The image display must be created just as the mouse moves over the smaller image.
+• The image display must be 15px to the right of the mouse and 15px down below the mouse.
+• The image display must follow the mouse as long as it’s still over the smaller image.
+• When the mouse is moved so that it is no longer over the smaller image, then the image
+display must be deleted.
