@@ -12,25 +12,54 @@ Guess number using Jquery
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="Assignment2Model.js"></script>
-</head>
-<body onload="randomNumber('tip')">
-Lest play a Game
-<input id="userNumber" type="number"
-       onkeydown="if (event.keyCode == 13) guessNumber()"><!--.getElementById('checkAnswer').click()">
-<button onclick="guessNumber()" id="checkAnswer" style="display: none">Are yoy Lucky</button>   -->
-<p id="clue">I'll tell you here if you are too high or too low </p>
+    <script type="text/javascript" src="Assignment7Model.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .output {
+            background-color: coral;
+        }
 
-<p id="tip"
-   style="-webkit-transform: rotate(-180deg);
-   text-align: right ;
+        .guess {
+            background-color: cyan;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+
+    </style>
+
+</head>
+<body onload="randomNumber('tip')" style="text-align: center; border: solid;" data-spy="scroll" data-target="#clue" data-offset="20" >
+
+<div class="container" style="padding-top: 20px">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            Let's play a Game
+            <input id="userNumber" type="text"
+                   onkeydown="if (event.keyCode == 13) guessNumber()">
+            <p id="clue" data-spy="scroll" style="border:solid"><!--look here to make the scroll element-->Guess a number between 1-100<br>I'll tell you
+                here if you are too high or too low </p>
+
+            <p id="tip"
+               style="-webkit-transform: rotate(-180deg);
+   text-align: center ;
    display: none">
 
-</p>
+            </p>
 
-<button onclick="document.getElementById('tip').style.display='block' ">show answer &#128519</button>
+            <button onclick="document.getElementById('tip').style.display='block' ">show answer &#128519</button>
 
 
-<p id="debug"></p>
+            <p id="debug"></p>
+
+        </div>
+    </div>
+</div>
 </body>
 </html>
